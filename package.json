@@ -1,26 +1,39 @@
 {
-  "name": "crud_app",
+  "name": "crud",
   "version": "1.0.0",
-  "description": "crud application with express and mongodb",
+  "description": "crup aplication",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salmento/CRUD_Application_Node.git"
   },
   "keywords": [
+    "mongodb",
     "crud",
-    "mongodb"
+    "nodejs",
+    "ejs",
+    "html"
   ],
-  "author": "akshay kashyap",
+  "author": "Salmento Chitlango",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salmento/CRUD_Application_Node/issues"
+  },
+  "homepage": "https://github.com/salmento/CRUD_Application_Node#readme",
   "dependencies": {
-    "axios": "^0.21.0",
-    "body-parser": "^1.19.0",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
-    "ejs": "^3.1.5",
+    "eslint": "^7.25.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.11",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.6"
+    "mongoose": "^5.12.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies":{
+    "nodemon": "^2.0.7"
   }
 }
+
