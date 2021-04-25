@@ -4,7 +4,7 @@ var Userdb = require('../model/model');
 exports.create = (req,res)=>{
     // validate request
     if(!req.body){
-        res.status(400).send({ message : "Content can not be emtpy!"});
+        res.status(400).send({ message : 'Content can not be emtpy!'});
         return;
     }
 
@@ -19,13 +19,14 @@ exports.create = (req,res)=>{
     // save user in the database
     user
         .save(user)
+        // eslint-disable-next-line no-unused-vars
         .then(data => {
             //res.send(data)
             res.redirect('/add-user');
         })
         .catch(err =>{
             res.status(500).send({
-                message : err.message || "Some error occurred while creating a create operation"
+                message : err.message || 'Some error occurred while creating a create operation'
             });
         });
 
@@ -40,13 +41,14 @@ exports.find = (req, res)=>{
         Userdb.findById(id)
             .then(data =>{
                 if(!data){
-                    res.status(404).send({ message : "Not found user with id "+ id})
+                    res.status(404).send({ message :'Not found user with id'+ id})
                 }else{
                     res.send(data)
                 }
             })
+            // eslint-disable-next-line no-unused-vars
             .catch(err =>{
-                res.status(500).send({ message: "Erro retrieving user with id " + id})
+                res.status(500).send({ message:'Erro retrieving user with id' + id})
             })
 
     }else{
@@ -55,7 +57,7 @@ exports.find = (req, res)=>{
                 res.send(user)
             })
             .catch(err => {
-                res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
+                res.status(500).send({ message : err.message ||'Error Occurred while retriving user information' })
             })
     }
 
@@ -67,7 +69,7 @@ exports.update = (req, res)=>{
     if(!req.body){
         return res
             .status(400)
-            .send({ message : "Data to update can not be empty"})
+            .send({ message :'Data to update can not be empty'})
     }
 
     const id = req.params.id;
@@ -79,8 +81,9 @@ exports.update = (req, res)=>{
                 res.send(data)
             }
         })
+        // eslint-disable-next-line no-unused-vars
         .catch(err =>{
-            res.status(500).send({ message : "Error Update user information"})
+            res.status(500).send({ message :'Error Update user information'})
         })
 }
 
@@ -94,13 +97,14 @@ exports.delete = (req, res)=>{
                 res.status(404).send({ message : `Cannot Delete with id ${id}. Maybe id is wrong`})
             }else{
                 res.send({
-                    message : "User was deleted successfully!"
+                    message :'User was deleted successfully!'
                 })
             }
         })
+        // eslint-disable-next-line no-unused-vars
         .catch(err =>{
             res.status(500).send({
-                message: "Could not delete User with id=" + id
+                message:'Could not delete User with id=' + id
             });
         });
 }

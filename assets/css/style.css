@@ -7,20 +7,23 @@
     --border-btn: #edf2f4;
 }
 
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-a {
+a{
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
 }
-
+body{ 
+    max-height: 100%; 
+}
 .container{
     max-width: 1024px;
     margin: auto;
+    max-height: 100%;
 }
 
 .nav-brand{
@@ -90,6 +93,11 @@ table{
     width: 100%;
 }
 
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+
 .table td, .table th{
     padding: .75em;
     vertical-align: top;
@@ -137,6 +145,7 @@ table{
 
 }
 
+
 /*  add user & update user template */
 .form-title{
     margin-top: 2em;
@@ -170,6 +179,12 @@ table{
 #update_user .form-group .radio,
 #add_user .form-group .radio{
     margin: 1em 2em;
+}
+
+/* adding style to radio buttons */
+.radio input[type='radio']{
+    position: absolute;
+    opacity: 0;
 }
 
 /* adding style to radio buttons */
@@ -230,3 +245,4 @@ table{
     background-color: var(--dark);
     color: var(--border);
 }
+

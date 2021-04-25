@@ -16,7 +16,8 @@
     "crud",
     "nodejs",
     "ejs",
-    "html"
+    "html",
+    "esLint"
   ],
   "author": "Salmento Chitlango",
   "license": "ISC",
@@ -27,13 +28,17 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
-    "eslint": "^7.25.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^5.12.5",
     "morgan": "^1.10.0"
   },
-  "devDependencies":{
-    "nodemon": "^2.0.7"
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-standard": "^16.0.2",
+    "nodemon": "^2.0.7",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
   }
 }
-
